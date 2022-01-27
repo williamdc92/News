@@ -1,0 +1,22 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card *ngFor = "let article of results">
+
+  <ion-card-content class="img_container">
+    <ion-img class="image" src="{{article.urlToImage}}"></ion-img>
+        </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-subtitle>Pizza</ion-card-subtitle>
+    <ion-card-title>{{article.title}}</ion-card-title>
+  </ion-card-header>
+  {{article.description}}
+  <ion-card-content>
+
+  </ion-card-content>
+</ion-card>

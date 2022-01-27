@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filtered News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-searchbar [(ngModel)]="searchTerm" (search)="searchEventFired()"><ion-button (click)="searchEventFired()">Search</ion-button></ion-searchbar>
+
+
+<ion-card *ngFor = "let article of filtered">
+
+  <ion-card-content class="img_container">
+    <ion-img class="image" src="{{article.urlToImage}}"></ion-img>
+        </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title>{{article.title}}</ion-card-title>
+  </ion-card-header>
+ 
+  <ion-card-content>
+{{article.description}}
+  </ion-card-content>
+</ion-card>

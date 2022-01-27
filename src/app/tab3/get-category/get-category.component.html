@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Categorized News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-button (click)="presentActionSheet()">Category: {{type}}</ion-button>
+
+
+
+<ion-card *ngFor = "let article of categorized">
+
+  <ion-card-content class="img_container">
+    <ion-img class="image" src="{{article.urlToImage}}"></ion-img>
+        </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title>{{article.title}}</ion-card-title>
+  </ion-card-header>
+ 
+  <ion-card-content>
+{{article.description}}
+  </ion-card-content>
+</ion-card>
